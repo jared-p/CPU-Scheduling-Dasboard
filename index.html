@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 id="title">CPU Scheduling Dashboard</h1>
+    <div id="container">
+        <form method="post">
+            <fieldset>
+                <label for="duration">Timeline Length:</label>
+                <input type="text" name="duration" id="duration" value="10">
+                <br>
+                <p>Choose Scheduling Algorithm:
+                    <input type="radio" id="fcfs" name="scheduling_algorithm" value="fcfs" checked>
+                    <label for="fcfs"><span class="hovertext" data-hover="First Come First Serve">FCFS</span></label>
+                    <input type="radio" id="rr" name="scheduling_algorithm" value="rr">
+                    <label for="rr"><span class="hovertext" data-hover="Round Robin">RR</span></label>
+                    <input type="radio" id="rm" name="scheduling_algorithm" value="rm">
+                    <label for="rm"><span class="hovertext" data-hover="Rate Monotonic">RM</span></label>
+                    <input type="radio" id="edf" name="scheduling_algorithm" value="edf">
+                    <label for="edf"><span class="hovertext" data-hover="Earliest Deadline First">EDF</span></label>
+                </p>
+                <p>
+                    <label for="tq" id="tq_label" style="display:none">Time Quantum for RR:</label>
+                    <input type="text" name="tq" id="tq" value="1" style="display:none;width:25px">
+                </p>
+                <label for="T1_duration">T1 Execution Time:</label>
+                <input type="text" name="T1_duration" id="T1_duration" value="3">
+                <label for="T1_period">T1 Period:</label>
+                <input type="text" name="T1_period" id="T1_period" value="5">
+                <label for="T1_release">T1 Release:</label>
+                <input type="text" name="T1_release" id="T1_release" value="1">
+                <label for="T1_checkbox">EN T1:</label>
+                <input type="checkbox" name="T1_checkbox" id="T1_checkbox" checked>
+                <br>
+                <label for="T2_duration">T2 Execution Time:</label>
+                <input type="text" name="T2_duration" id="T2_duration" value="1.5">
+                <label for="T2_period">T2 Period:</label>
+                <input type="text" name="T2_period" id="T2_period" value="4">
+                <label for="T2_release">T2 Release:</label>
+                <input type="text" name="T2_release" id="T2_release" value="0">
+                <label for="T2_checkbox">EN T2:</label>
+                <input type="checkbox" name="T2_checkbox" id="T2_checkbox" checked>
+                <br>
+                <label for="T3_duration">T3 Execution Time:</label>
+                <input type="text" name="T3_duration" id="T3_duration" value="1">
+                <label for="T3_period">T3 Period:</label>
+                <input type="text" name="T3_period" id="T3_period" value="2">
+                <label for="T3_release">T3 Release:</label>
+                <input type="text" name="T3_release" id="T3_release" value="0">
+                <label for="T3_checkbox">EN T3:</label>
+                <input type="checkbox" name="T3_checkbox" id="T3_checkbox" checked>
+                <br>
+                <label for="T4_duration">T4 Execution Time:</label>
+                <input type="text" name="T4_duration" id="T4_duration">
+                <label for="T4_period">T4 Period:</label>
+                <input type="text" name="T4_period" id="T4_period">
+                <label for="T4_release">T4 Release:</label>
+                <input type="text" name="T4_release" id="T4_release">
+                <label for="T4_checkbox">EN T4:</label>
+                <input type="checkbox" name="T4_checkbox" id="T4_checkbox">
+                <br>
+                <label for="width">Canvas Width:</label>
+                <input type="range" id="width" name="width" min="600" max="1800">
+                <br>
+                <input type="button" value="Plot Scheduling Algorithm" id="submit">
+
+            </fieldset>
+        </form>
+        <div id="tableDiv"></div>
+    </div>
+
+
+    <canvas id="canvas" width="1200" height="400"></canvas>
+
+    <h2 id="missing_task"></h2>
+
+
+
+
+    <!--<script src="renderer.js" async defer></script>-->
+    <script src="canvas.js" async defer></script>
+</body>
+
+</html>

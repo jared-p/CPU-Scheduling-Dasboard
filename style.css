@@ -1,0 +1,137 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body {
+  background: white;
+  color: #f8f8f8;
+}
+
+canvas {
+  background: #f8f8f8;
+  padding: 0px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+  display: block;
+  border: 2px solid #1646ad;
+
+}
+
+#missing_task {
+  text-align: center;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#title {
+  text-align: center;
+  color: #1646ad;
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+}
+
+form {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  background-color: #CCC;
+  max-width: 1000px;
+  padding: 16px;
+  border: 2px solid #1646ad;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  color: black;
+}
+
+.hovertext {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* table{
+  color:black;
+  width: 1200px;
+  background-color:#ccc
+}
+thead{
+  text-align: center;
+  font-size: 30px;
+}
+
+*/
+#tableDiv {
+  overflow-y: scroll;
+  height: 250px;
+}
+
+table {
+  padding: 0;
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  width: 200px;
+}
+
+thead th{
+  color: #1646ad;
+  font-weight: bold;
+  height: 50px;
+  background-color: white;
+}
+
+.body_row:nth-child(odd) {
+  background-color: rgba(83, 140, 204, 0.05);
+}
+
+.body_row:nth-child(even) {
+  background-color: rgba(204, 204, 204, 0.05);
+}
+
+.body_row:hover {
+  background-color: #1646ad;
+  color: white;
+}
+
+table tr td {
+  height: 25px;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+#tableDiv thead th { 
+  position: sticky;
+  top:0;
+}
